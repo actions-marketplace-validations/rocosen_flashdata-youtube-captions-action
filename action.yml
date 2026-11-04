@@ -1,6 +1,6 @@
-name: YouTube Uploader Captions - FlashData
-description: Export existing uploader-caption segments with timestamps and
-  language provenance for a subtitle review pipeline.
+name: YouTube Captions
+description: Get existing YouTube captions with text, timestamps and language
+  metadata. Defaults to uploader subtitles.
 author: FlashData
 branding:
   icon: search

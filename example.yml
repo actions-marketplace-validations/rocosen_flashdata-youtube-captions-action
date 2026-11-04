@@ -1,4 +1,4 @@
-name: YouTube Uploader Captions - FlashData
+name: YouTube Captions
 on:
   workflow_dispatch: {}
 permissions:
@@ -7,15 +7,14 @@ jobs:
   collect:
     runs-on: ubuntu-latest
     steps:
-      - name: Export existing uploader-caption segments with timestamps and language
-          provenance for a subtitle review pipeline.
+      - name: YouTube Captions
         id: data
-        uses: rocosen/flashdata-youtube-captions-action@v0.1.0
+        uses: rocosen/flashdata-youtube-captions-action@v0.1.1
         with:
           api-key: ${{ secrets.FLASHDATA_API_KEY }}
           video-id: dQw4w9WgXcQ
           options-json: '{"language":"en","auto":false}'
-      - name: Save data for the next pipeline stage
+      - name: Upload results
         uses: actions/upload-artifact@v4
         with:
           name: youtube-captions
